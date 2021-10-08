@@ -1,4 +1,5 @@
 const express = require('express');
+const msg = require('./mod_teste')
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -20,5 +21,5 @@ app.get('/noticias', function(req, res){
 });
 
 app.listen(3000, function(){
-    console.log('O servidor subiu na porta 3000 com Express');
+    console.log(msg());
 });
